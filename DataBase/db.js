@@ -2,7 +2,7 @@ const { Sequelize } = require('sequelize');
 
 
 // Defining the data base
-const db = new Sequelize('bookcook', 'root', 'beatrics1992',{
+const db = new Sequelize(process.env.DB_DATABASE, process.env.DB_USER, process.env.DB_PASSWORD,{
     host: 'localhost',
     dialect: 'mysql',
     logging: true,
